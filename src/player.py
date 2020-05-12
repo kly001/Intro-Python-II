@@ -3,6 +3,7 @@
 
 from room import Room
 
+
 class Player:
     def __init__(self, name, location):
         self.name = name
