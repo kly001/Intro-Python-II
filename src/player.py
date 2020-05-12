@@ -4,7 +4,6 @@
 from room import Room
 
 class Player:
-    def __init__(self, name, currnet_room):
-        self.name = name
-        self.current_room = current_room
-        
+    def __init__(self, player_name, player_location):
+        self.player_name = player_name
+        self.player_location = player_location
