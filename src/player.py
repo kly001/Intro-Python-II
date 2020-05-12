@@ -10,4 +10,5 @@ class Player:
         self.location = location
 
     def __str__(self):
-        return f"<Player:  {self.name}>"
+        return f"<Hi, {self.name}.  Welcome to the game.>"
+

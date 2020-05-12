@@ -2,13 +2,10 @@
 # description attributes.
 
 class Room:
-    def __init__(self, rm_name, rm_description, n_to, e_to, s_to, w_to):
+    def __init__(self, rm_name, rm_description):
         self.rm_name = rm_name
         self.rm_description = rm_description
-        self.n_to = None
-        self.e_to = None
-        self.s_to = None
-        self.w_to = None
+        
 
     def __str__(self):
         return f"<Room:  {self.rm_name}  Direction> "

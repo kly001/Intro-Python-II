@@ -48,10 +48,32 @@ player = Player(name = "Joan", location = room['outside'])
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
 while True:
-    print(player.location.rm_name, player.location.rm_description)
-    direction = input("Which direction do you what to go: (n)North, (s)South, (e)East or (w)West?")
+    print(f"{player.name}, you are now: {player.location.rm_name}, ({player.location.rm_description}!)")
+    direction = input("Which direction do you what to go: (n)North, (s)South, (e)East, (w)West, or (q) to Quit the game?")
+
+
+    if direction == "q":
+            print("Thanx for playing. Bye for now!")
+            break
+
+    try:
+        if direction == "n":
+            print("I don't think going North is a great idea.  Try again.")
+        elif direction == "e":
+            print("I don't think going East is a great idea.  Try again.")
+        elif direction == "w":
+            print("I don't think going West is a great idea.  Try again.")
+        elif direction == "s":
+            print("I don't think going South is a great idea.  Try again.")
+        else:
+            print("That's not a valid selection.  Try again")
+    except ValueError:
+            print("Please make your choice from the directions listed above.")
+       
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
+
+
 #
 # If the user enters "q", quit the game.
