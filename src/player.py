@@ -4,9 +4,9 @@
 from room import Room
 
 class Player:
-    def __init__(self, player_name, player_location):
-        self.player_name = player_name
-        self.player_location = player_location
+    def __init__(self, name, location):
+        self.name = name
+        self.location = location
 
-    def __str_(self):
-        return f"<Player name: {self.name}, current_room: {self.player_location}>"
+    def __str__(self):
+        return f"<Player:  {self.name}>"
