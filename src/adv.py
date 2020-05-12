@@ -39,7 +39,7 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
-player = Player(name = "Joan", location = room['outside'])
+player = Player(name = "Joan", current_room = room['outside'])
 
 
 # Write a loop that:
@@ -48,8 +48,8 @@ player = Player(name = "Joan", location = room['outside'])
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
 while True:
-    print(f"{player.name}, you are now: {player.location.rm_name}, ({player.location.rm_description}!)")
-    direction = input("Which direction do you what to go: (n)North, (s)South, (e)East, (w)West, or (q) to Quit the game?")
+    print(f"{player.name}, you are now: {player.current_room.rm_name}, ({player.current_room.rm_description}!)")
+    direction = input("Which direction do you what to go: (n)North, (s)South, (e)East, (w)West, or (q) to Quit the game?  ")
 
 
     if direction == "q":
