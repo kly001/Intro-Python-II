@@ -11,5 +11,5 @@ class Player:
         
 
     def __str__(self):
-        return f"<Hi, {self.name}.  Welcome to the game.>"
+        return {self.name}
 

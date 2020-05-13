@@ -40,7 +40,12 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 player = Player(input("Please tell me your name:  "), current_room = room['outside'])
-print(f"Thank you are you ready to begin, {player.name}? Let's go!")
+print()
+print("------------------------------------------------------------------------------------------------")
+print()
+print(f"     Thanx!  Are you ready to begin, {player.name.capitalize()}?   Let's go!   ")
+print()
+print("------------------------------------------------------------------------------------------------")
 
 
 # Write a loop that:
@@ -49,28 +54,37 @@ print(f"Thank you are you ready to begin, {player.name}? Let's go!")
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
 while True:
-    print(f"{player.name}, you are now: {player.current_room.rm_name}, ({player.current_room.rm_description}!)")
+    print(f"{player.name.capitalize()}, you are now: {player.current_room.rm_name}")
+    print(f"({player.current_room.rm_description}!)") 
+    print()
     direction = input("Which direction do you what to go: (n)North, (s)South, (e)East, (w)West, or (q) to Quit the game?  ")
-
+    print()
+    
 
     if direction == "q":
-            print("Thanx for playing. Bye for now!")
+            print(f"Thanx for playing, {player.name.capitalize()}. Bye for now!")
             break
 
     try:
         if direction == "n":
-            print("I don't think going North is a great idea.  Try again.")
+            print(f"I don't think going North is a great idea {player.name.capitalize()}.  Try again.")
+            print("------------------------------------------------------------------------------------------------")
         elif direction == "e":
-            print("I don't think going East is a great idea.  Try again.")
+            print(f"I don't think going East is a great idea {player.name.capitalize()}.  Try again.")
+            print("------------------------------------------------------------------------------------------------")
         elif direction == "w":
-            print("I don't think going West is a great idea.  Try again.")
+            print(f"I don't think going West is a great idea {player.name.capitalize()}.  Try again.")
+            print("------------------------------------------------------------------------------------------------")
         elif direction == "s":
-            print("I don't think going South is a great idea.  Try again.")
+            print(f"I don't think going South is a great idea {player.name.capitalize()}.  Try again.")
+            print("------------------------------------------------------------------------------------------------")
         else:
-            print("That's not a valid selection.  Try again")
+            print(f"{player.name.capitalize()}, that's not a valid selection.  Try again")
+            print("------------------------------------------------------------------------------------------------")
     except ValueError:
-            print("Please make your choice from the directions listed above.")
-       
+            print(f"Please make your choice from the directions listed above {player.name.capitalize()}")
+            print("------------------------------------------------------------------------------------------------")
+
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
