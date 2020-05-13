@@ -11,4 +11,4 @@ class Room:
         self.w_to = None
 
     def __str__(self):
-        return f"<Room name: {self.rm_name}> "
+        return {self.rm_name}
