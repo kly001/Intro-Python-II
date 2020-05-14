@@ -46,11 +46,11 @@ room['treasure'].w_to = room["secret"]
 # Make a new player object that is currently in the 'outside' room.
 player = Player(input("Please tell me your name:  "), current_room = room['outside'])
 print()
-print("------------------------------------------------------------------------------------------------")
+print("-----------------------------------------------------------------------------------")
 print()
 print(f"     Thanx!  Are you ready to begin, {player.name.capitalize()}?   Let's go!   ")
 print()
-print("------------------------------------------------------------------------------------------------")
+print("------------------------------------------------------------------------------------")
 
 
 # Write a loop that:
