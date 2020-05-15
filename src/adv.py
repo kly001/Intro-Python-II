@@ -1,5 +1,6 @@
 from room import Room
 from player import Player
+from item import Item
 
 # Declare all the rooms
 
@@ -35,9 +36,10 @@ room['overlook'].s_to = room['foyer']
 room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
-
-# My Additions:
 room['treasure'].w_to = room["secret"]
+
+# Add room items
+room['outside'].add_item
 
 #
 # Main
